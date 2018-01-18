@@ -156,9 +156,14 @@ def makeWebhookResult(data):
     }
 
 
-if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
-
-    #print "Starting app on port %d" % port
-    print(int "Starting app on port %d" % port)
-    app.run(debug=False, port=port, host='0.0.0.0')
+#if __name__ == '__main__':
+ #   port = int(os.getenv('PORT', 5000))
+#
+ #   #print "Starting app on port %d" % port
+  #  print(int "Starting app on port %d" % port)
+   # app.run(debug=False, port=port, host='0.0.0.0')
+   
+    var port = process.env.PORT || 5000
+    server.listen(port, function() {
+    console.log("App is running on port " + port);
+    });
